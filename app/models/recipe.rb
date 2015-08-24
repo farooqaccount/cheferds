@@ -7,7 +7,11 @@ class Recipe < ActiveRecord::Base
   validates :summary, presence: true, length: {minimum: 10, maximum: 150}
   validates :description, presence: true, length: {minimum: 20, maximum: 500}
   mount_uploader :picture, PictureUploader
+  mount_uploader :picture1, PictureUploader
+  mount_uploader :picture2, PictureUploader
+  mount_uploader :picture3, PictureUploader
   validate :picture_size
+  
   default_scope -> { order(updated_at: :desc)}
   
   def thumbs_up_total
@@ -23,6 +27,18 @@ class Recipe < ActiveRecord::Base
   def picture_size
     if picture.size > 5.megabytes
       errors.add(:picture, " should be less than 5MB")
+    end
+    
+    if picture1.size > 5.megabytes
+      errors.add(:picture1, " should be less than 5MB")
+    end
+    
+    if picture2.size > 5.megabytes
+      errors.add(:picture2, " should be less than 5MB")
+    end
+    
+    if picture3.size > 5.megabytes
+      errors.add(:picture3, " should be less than 5MB")
     end
   end
   
