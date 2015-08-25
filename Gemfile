@@ -31,6 +31,10 @@ gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 # gem for password
 gem 'bcrypt', '3.1.7'
+# gem for youtube upload
+#gem 'youtube_it', '~> 2.4.0'
+# gem for production file handling
+gem 'fog', '1.23.0'
 
 
 # Use ActiveModel has_secure_password
