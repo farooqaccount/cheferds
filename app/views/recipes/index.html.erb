@@ -45,7 +45,7 @@
         <%= image_tag(recipe.picture1.url, size: "250x150", class: "gravatar")%>
       <% elsif recipe.picture2? %>
         <%= image_tag(recipe.picture2.url, size: "250x150", class: "gravatar")%>
-      <% else recipe.picture3? %>
+      <% elsif recipe.picture3? %>
         <%= image_tag(recipe.picture3.url, size: "250x150", class: "gravatar")%>
       <% end %>
       
