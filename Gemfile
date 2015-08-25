@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Below gems are for image uploading support
-gem 'carrierwave', '0.10.0'
+#gem 'carrierwave', '0.10.0'
+gem 'carrierwave-aws'
 gem 'mini_magick', '3.8.0'
 # for pagination
 gem 'will_paginate', '3.0.7'
