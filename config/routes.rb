@@ -27,6 +27,9 @@ Rails.application.routes.draw do
    post '/login', to: 'logins#create'
    get '/logout', to: 'logins#destroy'
    
+   resources :styles, only: [:new,:create,:show]
+   resources :ingredients, only: [:new, :create, :show]
+   
    
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
