@@ -45,3 +45,18 @@ Authentication updates
 - Like - update to current user
 - Before_action - require_user, except: [:show, :index]
 - Before_action - :require_same_user for chef, only: [:edit, :update]
+
+Building review functionality
+- Migration to create reviews table body, text area, chef id and recipe id
+- Need to build Review model
+- Write the tests and validation to the review model
+- Build Asscociations, has_many and belongs_to
+- Test associations in rails console
+- recipe.reviews
+- chef.reviews
+- reviews in show.html of recipe
+- nested like like which is created for the routes
+- only authenticated chefs can add reviews - before action require user
+- associate chef id and recipe id for review
+- Use exiting code if possible
+- 

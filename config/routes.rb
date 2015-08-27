@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #post '/rate' => 'rater#create', :as => 'rate'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
    resources :recipes do
     member do
       post 'like'
+      post 'review'
+      delete 'review', to: "recipes#deletereview"
     end
    end
    

@@ -50,7 +50,7 @@
     <ul class="nav_ul_item">
       <li class="dropdown">
         <%= link_to "#", class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
-          <%= current_user.chefname %> <b class="caret"></b>
+          My Profile <b class="caret"></b>
         <% end %>
         
         <ul class="dropdown-menu">
@@ -61,11 +61,17 @@
         </ul>
       </li>
     </ul>
+    
+    <div class="nav_name_item">
+       <%= link_to gravatar_for(current_user, size: 20),chef_path(current_user) %> | Logged in as: <%= current_user.chefname%>
+    </div>
     <% else %>
     <div class="nav_item">
       <%= link_to "Login", login_path, class: "btn btn-default btn-success"%>
     </div>
+    
     <% end %>
+    
     
   </div>
 </header>

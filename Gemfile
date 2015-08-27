@@ -36,6 +36,7 @@ gem 'bcrypt', '3.1.7'
 #gem 'youtube_it', '~> 2.4.0'
 # gem for production file handling
 # gem 'fog', '1.23.0'
+#gem 'ratyrate'
 
 
 # Use ActiveModel has_secure_password
